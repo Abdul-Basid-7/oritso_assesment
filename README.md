@@ -1,8 +1,14 @@
 # oritso_assesment
 # Task Management System
 
-This project is developed as part of the **Oritso Entry-Level IT Assignment**.  
-It is a **full-stack web application** that allows users to manage tasks efficiently with complete CRUD functionality, search capability, and proper task tracking as per the assignment requirements.
+This project is a **Task Management System** developed as part of the **Oritso Entry-Level IT Assignment**.  
+The system allows authenticated users to create, manage, search, update, and delete tasks efficiently.
+
+The application is designed to:
+- Track task timelines using due dates
+- Manage task lifecycle using status (Pending, In Progress, Completed)
+- Maintain proper audit information such as Created By, Updated By, Created On, and Last Updated On
+- Provide a responsive and user-friendly interface
 
 ---
 
@@ -19,27 +25,54 @@ It is a **full-stack web application** that allows users to manage tasks efficie
 - React (Vite)
 - Tailwind CSS
 
-## Project Structure
-Task-Management-System
-│
-├── Backend
+- 
 
-│  ├── config
-│  ├── controllers
-│  ├── models
-│  ├── routes
-│  ├── middleware
-│  ├── server.js
-│  └── package.json
-│
-├── frontend
+###  Data Dictionary
 
-│  ├── src
-│  ├── public
-│  ├── index.html
-│  └── package.json
-│
-└── README.md
+#### Users Table
+
+| Column Name | Data Type | Description |
+|-------------|-----------|-------------|
+| id          | INT (PK)  | Unique user identifier |
+| username    | VARCHAR   | Name of the user |
+| email       | VARCHAR   | Email of the user |
+| password    | VARCHAR   | Encrypted password |
+
+#### Tasks Table
+
+| Column Name | Data Type  | Description |
+|-------------|------------|-------------|
+| id          |   INT (PK) | Unique task identifier |
+| title       | VARCHAR    | Task title |
+| description | TEXT       | Task description |
+| due_date    | DATE       | Task due date |
+| status      | VARCHAR    | Pending / In Progress / Completed |
+| remarks     | TEXT       | Additional remarks |
+| created_by  | INT (FK)   | User who created the task |
+| updated_by  | INT (FK)   | User who last updated the task |
+| created_at  | TIMESTAMP  | Task creation timestamp |
+| updated_at  | TIMESTAMP  | Task update timestamp |
+
+Documentation of Indexes Used
+
+- Primary Key index on `users.id`
+- Primary Key index on `tasks.id`
+- Foreign Key indexes on:
+  - `tasks.created_by`
+  - `tasks.updated_by`
+- Index on `tasks.title` to optimize search functionality
+
+
+Code First or Database First Approach
+**Code First Approach** has been used.
+
+**Reason:**
+- Faster development iteration
+- Better version control of schema changes
+- Easier maintenance and scalability
+- Suitable for backend-driven application design
+
+
 
 ## Features
 
