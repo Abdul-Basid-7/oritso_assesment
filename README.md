@@ -23,23 +23,25 @@ It is a **full-stack web application** that allows users to manage tasks efficie
 Task-Management-System
 │
 ├── Backend
-│ ├── config
-│ ├── controllers
-│ ├── models
-│ ├── routes
-│ ├── middleware
-│ ├── server.js
-│ └── package.json
+
+│  ├── config
+│  ├── controllers
+│  ├── models
+│  ├── routes
+│  ├── middleware
+│  ├── server.js
+│  └── package.json
 │
 ├── frontend
-│ ├── src
-│ ├── public
-│ ├── index.html
-│ └── package.json
+
+│  ├── src
+│  ├── public
+│  ├── index.html
+│  └── package.json
 │
 └── README.md
 
-## Features (As Per PDF)
+## Features
 
 ### User Management
 - User Registration
