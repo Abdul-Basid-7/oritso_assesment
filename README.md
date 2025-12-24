@@ -72,7 +72,21 @@ Code First or Database First Approach
 - Easier maintenance and scalability
 - Suitable for backend-driven application design
 
+Environment Details & Dependencies
+#### Backend
+- Node.js (v18+)
+- Express.js
+- MySQL
+- jsonwebtoken
+- bcrypt
+- mysql2
 
+#### Frontend
+- Node.js
+- React
+- Vite
+- Tailwind CSS
+- Axios
 
 ## Features
 
